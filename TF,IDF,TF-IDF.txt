@@ -1,0 +1,50 @@
+In Natural Language Processing (NLP), TF, IDF, and their combination, TF-IDF, are fundamental concepts used to quantify the importance of words in a document relative to a collection of documents (called a corpus). Here's what they represent:
+
+1. TF (Term Frequency)
+Definition: Measures how frequently a term (word) appears in a single document.
+Formula:
+    TF(term) = (Number of times the term appears in the document) / (Total number of terms in the document)
+
+What it Represents:
+- The importance of a word within a single document.
+- Words that occur more frequently in the document get higher scores.
+- Does not account for the word's importance across the entire corpus.
+
+2. IDF (Inverse Document Frequency)
+Definition: Measures how unique or rare a term is across a collection of documents.
+Formula:
+    IDF(term) = log(Total number of documents / Number of documents containing the term)
+
+What it Represents:
+- Words that appear in many documents (common words like "the," "and," etc.) have a low IDF score.
+- Rare words that appear in only a few documents have a high IDF score.
+- Helps reduce the impact of frequently occurring but less meaningful words.
+
+3. TF-IDF (Term Frequency-Inverse Document Frequency)
+Definition: A composite score that combines TF and IDF to measure the importance of a term in a specific document relative to the entire corpus.
+Formula:
+    TF-IDF(term) = TF(term) * IDF(term)
+
+What it Represents:
+- Words that are frequent in a specific document but rare across the corpus are given the highest scores.
+- Helps identify words that are most significant for distinguishing one document from others.
+
+Example:
+Suppose we have 3 documents:
+- Doc1: "Machine learning is fun and exciting."
+- Doc2: "I love learning about data science."
+- Doc3: "Machine learning and data science are related fields."
+
+Step 1: Calculate TF (Term Frequency) for "learning" in Doc1:
+    TF(learning, Doc1) = 1/6 (since "learning" appears once in 6 words)
+
+Step 2: Calculate IDF for "learning":
+    IDF(learning) = log(3/3) = 0 (since "learning" appears in all 3 documents)
+
+Step 3: Calculate TF-IDF for "learning" in Doc1:
+    TF-IDF(learning, Doc1) = TF(learning, Doc1) * IDF(learning)
+                           = (1/6) * 0
+                           = 0
+
+Result:
+This result means the word "learning" isn't particularly unique or important for distinguishing Doc1 because it’s common across all documents.
