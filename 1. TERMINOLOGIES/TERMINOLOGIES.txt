@@ -1,0 +1,5 @@
+1.Document: A single unit of text, such as a paragraph, article, or sentence, used for analysis.
+
+2.Corpus: A collection of documents, typically used for linguistic analysis or machine learning tasks.
+
+3.Bag of Words: A method of representing text data where each document is represented by the frequency of words, ignoring grammar, word order, and context.
